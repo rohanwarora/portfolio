@@ -1,0 +1,331 @@
+---
+title: "Shaping a Happier World: Insights from the 2017 World Happiness Report"
+author: "Rohan Arora"
+date: "5/1/2023"
+output:
+  html_document:
+    code_folding: hide
+    number_sections: true
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+#packages
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(countrycode)
+library(corrplot)
+library(RColorBrewer)
+library(car)
+library(faraway)
+library(gtsummary)
+library(broom)
+```
+
+# The World Happiness Report 2017
+## Background 
+
+The World Happiness Report is a publication that ranks countries based on their happiness levels. The rankings are determined by the responses to the Gallup World Poll, an annual survey of individuals in over 150 countries. The United Nations Sustainable Development Solutions Network publishes the report. The report also includes an analysis of the data, focusing on how happiness is affected by various factors, such as economic and social development, health, and good governance. These individual responses are turned into a score on a scale of 1 through 10. The measured variables include real GDP per capita, social support, life expectancy, freedom to choose, generosity, and perceptions of corruption. We looked at the 2017 report as it contained the most data. 
+
+
+## Social Good
+
+The World Happiness Report can help policymakers and others interested in promoting well-being in their countries. By providing a ranking of countries based on their happiness levels, the report can be used to identify areas where improvements can be made. For example, suppose a country has a low ranking in the report. In that case, policymakers can use the data and analysis provided to determine what factors contribute to the low ranking and take action to address those factors. Additionally, the report can be used to raise awareness about the importance of promoting well-being and happiness in society. By highlighting the role that factors such as economic and social development, health, and good governance play in determining happiness, the report can promote a broader understanding of the factors that contribute to well-being and inspire action to improve those factors.
+
+## SMART Question
+
+Based on data collected in the 2017 World Happiness Report, which features are most impactful in determining a happiness score, and how much do these correlations differ across regions?
+
+
+## Cleaning
+
+```{r}
+#add dataset called 2017.csv in the zipfile
+X2017 = read.csv("2017.csv")
+```
+
+This model uses the World Happiness Report 2017 dataset. The dataset is called `X2017` in this markdown file (or as a local file `2017.csv` from the attached CSV file). I needed to clean up the dataset given to us to make it easier to understand. I first removed the `whisker.high` and `whisker.low`, which are unnecessary to my data analysis. I also renamed multiple variables to simplify them into a single word or phrase (for example, `Healthy.Life.Expectancy` to `Life.Expectancy`.) The final piece of cleanup is categorizing the country variable into separate regions to see if certain regions have different correlations. I named the cleaned-up data `newhappiness`, so let us look at the differences between the two datasets.
+
+### Original Dataset
+```{r, results='markup'}
+str(X2017)
+```
+
+### The Cleaned Dataset
+```{r}
+#renaming variables
+colnames(X2017)[0:11]=c("Country", "Happiness.Rank","Happiness.Score","Whisker.high", "Whisker.low", "Economy", "Life.Expectancy", "Freedom", "Generosity", "Trust in Gov","Dystopian.Residual")
+newhappiness<-X2017
+#creating regions
+newhappiness$Regionnc = countrycode(sourcevar = newhappiness$Country, origin = "country.name",destination = "region")
+#getting rid of whisker variables
+newhappiness$Whisker.high=NULL
+newhappiness$Whisker.low=NULL
+newhappiness$Dystopia.Residual=NULL
+newhappiness$Region <- as.factor(newhappiness$Regionnc)
+newhappiness$Regionnc=NULL
+```
+
+
+```{r, results='markup'}
+str(newhappiness)
+summary(newhappiness[1:8], title = "Statistics Summary of Variables")
+```
+I have now cleaned the dataset to be usable for my analysis by removing unnecessary variables and categorizing the countries into regions. So we can start looking at the dataset and begin data analysis of the World Happiness Report 2017.
+
+The variables in I will be looking at dataset are:  
+
+* `Country`: A categorical variable for each country name.
+* `Happiness.Rank`: Rank of the country concerning happiness score.
+* `Happiness.Score`: A metric measured in 2017 by asking the sampled people: "How would you rate your happiness on a scale of 0 to 10 where 10 is the happiest."
+* `Economy`: The extent to which GDP contributes to the calculation of the happiness score.
+* `Life.Expectancy`: The extent to which life expectancy contributed to the calculation of the happiness score.
+* `Freedom`: The extent to which freedom contributed to the calculation of the happiness score.
+* `Generosity`: The extent to which generosity contributes to happiness score.
+* `Trust in Gov`: The extent to which perception of trust in government contributes to happiness score.
+* `Region`: What region the country falls within.
+
+# Data Analysis 
+## Exploratory Data Analysis
+When I cleaned the dataset, my initial thought was to see what variables correlate with `Happiness.Score`. So, I created a correlation matrix of those variables and `Happiness.Score`.
+
+### Correlation Matrix for Entire Dataset
+
+```{r}
+#Correlation Matrix for 2017 World Happiness Report
+corPearson = cor(newhappiness[3:8])
+```
+```{r, results='markup'}
+corrplot(corPearson)
+```
+
+This correlation plot highlights that the three most correlated variables with `Happiness.Score` are the `Economy`, `Life.Expectancy`, and `Freedom` scores. `Economy` is the highest correlated, followed by `Freedom` and `Life.Expectancy`. While this correlation matrix was made for all pieces of data, I wanted to look deeper into the data to see if this message would change depending on the specific region. Countries may have different sources of happiness for a variety of reasons. One reason is that countries may have different cultural values and beliefs, affecting what people consider essential for their happiness. For example, in some cultures, family and community connections may be more important for happiness than individual achievement, while personal success and achievement may be more valued in other cultures. I decided to see if specific regions had different correlations than the entire dataset. 
+
+Before I began to study the individual correlations of specific regions, I wanted to look at the difference in `Happiness.Score` per region. This would give us a bigger picture of regions' `Happiness.Score` distribution. Keeping this in the back of my mind, I could look at the effect of different areas on the correlation of specific scores like `Economy`, `Freedom`, and `Life.Expectancy` on `Happiness.Score`.
+
+
+### Boxplot of Happiness Scores per Region
+```{r, results='markup', warning=FALSE}
+#Happiness Score v Region boxplot
+ggplot(newhappiness, aes(x=Region,y=Happiness.Score, fill=Region)) + 
+  geom_boxplot(width=0.5, length=1,outlier.shape = NA) +
+  geom_jitter(width = 0.1, alpha=0.5) +
+  labs(title="Happiness Score vs Region", y = "Happiness Score", x="Region") +
+  theme(legend.position = 'none') +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+```
+
+```{r}
+#creating subsets for each region
+EUCAShappiness<- subset(newhappiness, Region=="Europe & Central Asia")
+NAhappiness<-subset(newhappiness, Region=="North America")
+EASPhappiness<-subset(newhappiness, Region=="East Asia & Pacific")
+LAChappiness<-subset(newhappiness, Region=="Latin America & Caribbean")
+MENAhappiness<-subset(newhappiness, Region=="Middle East & North Africa")
+SAhappiness<-subset(newhappiness, Region=="South Asia")
+SSAhappiness<-subset(newhappiness, Region=="Sub-Saharan Africa")
+```
+
+This boxplot gives us information on the distribution of `Happiness.Score`. The region with the highest reported `Happiness.Score` was North America, with a mean of `r mean(NAhappiness$Happiness.Score)`, and the lowest region was Sub-Saharan Africa, with a mean of `r mean(SSAhappiness$Happiness.Score)`. I created a table containing the means of each region to contextualize these differences better. Using the geom_jitter function, the boxplot gives us additional information about the distribution and size of `Happiness.Score` data per region. For example, North America and South Asia have very small samples compared to the other areas. North America only contained two data points, and South Asia included seven.
+
+|       | Mean Happiness Score |
+| :---        |    ---:   |
+| East Asia & Pacific     | `r mean(EASPhappiness$Happiness.Score)`       |
+| Europe & Central Asia   | `r mean(EUCAShappiness$Happiness.Score)`        |
+| Latin America & Caribbean  | `r mean(LAChappiness$Happiness.Score)`        |
+| Middle East & North Africa   | `r mean(MENAhappiness$Happiness.Score)`        |
+| North America   | `r mean(NAhappiness$Happiness.Score)`        |
+| South Asia   | `r mean(SAhappiness$Happiness.Score)`        |
+| Sub-Saharan Africa   | `r mean(SSAhappiness$Happiness.Score)`        |
+
+## Addressing our Smart Question
+
+Now that I have taken a brief look at the dataset, I can look toward answering the SMART question: "based on data collected in the 2017 World Happiness Report, which features are most impactful in determining a happiness score, and how much do these correlations differ across regions?"
+ 
+### Correlation Matrices for Individual Regions
+#### Europe & Central Asia
+```{r, results='markup'}
+#corrplot for each region
+EUCAScorplot<-cor(EUCAShappiness[3:8])
+corrplot(EUCAScorplot, type="upper",  method = 'number')
+```
+
+In Europe and Central Asia correlation matrix, `Happiness.Score` was strongly correlated with `Economy` and `Generosity` scores, while the remaining scores are were moderately correlated with `Happiness.Score`.
+
+#### North America
+```{r, results='markup'}
+NAcorplot<-cor(NAhappiness[3:8])
+corrplot(NAcorplot, type="upper", method = 'number')
+```
+
+The numbers produced by this correlation matrix are unproductive as the sample size was too small due to containing only two countries, so the correlation between particular variables and `Happiness.Score` cannot be seen.
+
+#### East Asia & Pacific
+```{r, results='markup'}
+EASPcorplot<-cor(EASPhappiness[3:8])
+corrplot(EASPcorplot, type="upper", method = 'number')
+```
+
+In East Asia & the Pacific correlation matrix, `Happiness.Score` was correlated most with `Economy` and `Life.Expectancy`. `Happiness.Score` was moderately correlated with `Freedom` scores and was least correlated with `Trust in Gov` and `Generosity` scores.
+
+#### Latin America & Caribbean
+```{r, results='markup'}
+LACcorplot<-cor(LAChappiness[3:8])
+corrplot(LACcorplot, type="upper", method = 'number')
+```
+
+In Latin America and the Caribbean correlation matrix, `Happiness.Score` was strongly correlated with `Economy` and `Freedom` scores. `Generosity` and `Life.Expectancy` are moderately correlated with `Happiness.Score`.
+
+#### Middle East & North Africa
+```{r, results='markup'}
+MENAcorplot<-cor(MENAhappiness[3:8])
+corrplot(MENAcorplot, type="upper", method = 'number')
+```
+
+In the Middle East and North Africa correlation matrix, `Happiness.Score` was strongly correlated with the `Economy`, `Life.Expectancy`, and `Generosity` scores. These scores were all evenly correlated with `Happiness.Score`, with a correlation ranging from .81 to .8. `Happiness.Score` was least correlated with `Trust in Gov`scores. 
+
+#### South Asia
+```{r, results='markup'}
+SAcorplot<-cor(SAhappiness[3:8])
+corrplot(SAcorplot, type="upper", method = 'number')
+```
+
+South Asia had the same issue as North America as they both lacked sample size, so I do not feel confident in making conclusions about the specific correlations.
+
+#### Sub-Saharan Africa
+```{r, results='markup'}
+SSAcorplot<-cor(SSAhappiness[3:8])
+corrplot(SSAcorplot, type="upper", method = 'number')
+```
+
+There were no strong correlations for `Happiness.Score` in Sub-Saharan Africa. However, `Economy` and `Life.Expectancy` scores were moderately correlated with `Happiness.Score`.
+
+### Correlation Matrices Analysis 
+There was variation among the correlation of specific scores on `Happiness.Score` that depended upon the region. I also saw noticeable trends when we looked at each matrix. First, the most commonly strongly correlated variable to `Happiness.Score` was `Economy`. However, other variables might be strongly correlated depending on the region. I created a table of the strongly and moderately correlated variables to `Happiness.Score` per region.
+
+|       | Strongly Correlated  | Moderately Correlated      |
+| :---        |    :----:   |          ---: |
+| East Asia & Pacific      | Economy and Life Expectancy       |  Freedom   |
+| Europe & Central Asia   | Economy and Generosity        |  Trust in Gov, Freedom, & Life Expectancy      |
+| Latin America & Caribbean   | Economy and Freedom        |  Trust in Gov, Generosity, & Life Expectancy      |
+| Middle East & North Africa   | Economy, Life Expectancy, Freedom, & Generosity        |  None      |
+| North America   | N/A        |  N/A      |
+| South Asia   | N/A       |  N/A      |
+| Sub-Saharan Africa   | None        |  Economy, Life Expectancy, & Generosity      |
+
+This table shows that `Economy`, `Freedom`, and `Life.Expectancy` is the most commonly strongly or moderately correlated variables. This statement aligns with the initial correlation plot I looked at. 
+
+
+#### Scatter Plots
+
+Now that I found the differences between each region and which variables are most correlated with `Happiness.Score` per region, I looked at the linear relationship between `Happiness.Score`and the variables I found to be most correlated.
+```{r}
+plit<- ggplot(newhappiness, aes(x=Freedom, y=Happiness.Score))+
+  geom_point()+
+  geom_smooth(method = 'lm')+
+  labs(title="Scatter plot of happiness score vs freedom score", x = "Freedom Score", y = "Happiness Score")
+suppressMessages(print(plit))
+```
+
+I first examined the scatter plot between `Freedom` scores and `Happiness.Score`. There appeared to be a positive relationship between the two variables.
+
+```{r}
+plot2<-ggplot(newhappiness, aes(x=Economy, y=Happiness.Score))+
+  geom_point()+
+  geom_smooth(method = 'lm')+
+  labs(title="Scatter plot of happiness score vs economy score", x = "Economy Score", y = "Happiness Score")
+suppressMessages(print(plot2))
+```
+
+The relationship between `Happiness.Score` and `Economy` was also positive. This relationship looked similarly positively correlated to `Freedom` scores. My correlation matrix analysis would assert this because it showed that `Happiness.Score` correlated most with `Economy` and `Freedom`.
+
+```{r}
+plot<-ggplot(newhappiness, aes(x=Life.Expectancy, y=Happiness.Score))+
+  geom_point()+
+  geom_smooth(method = 'lm')+
+  labs(title="Scatter plot of happiness score vs life expectancy score", x = "Life Expectancy Score", y = "Happiness Score")
+suppressMessages(print(plot))
+```
+
+The relationship between `Life.Expectancy` and `Happiness.Score` was also positive, though the slope compared to the last two scatterplots was not as big. This was supported by the correlation matrix, which placed `Life.Expectancy` as the least correlated of the three.
+
+
+### Feature Importance Test
+Once I saw what was most correlated with `Happiness.Score` per region and the linear relationships between the most correlated variables and `Happiness.Score`, I asked myself which of these was the most important on `Happiness.Score`. To answer this question, I decided to test the feature importance of those variables. To do this, I took the Z-scores of the most critical variables. Taking z-scores is a standard way of standardizing variables, indicating how many standard deviations a given value is above or below the variable's mean. When one takes the z-scores of independent variables and runs a regression, the coefficients of the regression model will represent the standardized effects of the variables on the response variable. This means that the coefficients will indicate how much the response variable is expected to change for a one-unit change in the standardized predictor variable while holding all other variables constant. By standardizing the variables in this way, it is possible to directly compare the effects of the different variables on the response. Standardizing the variables can also make it easier to interpret the regression results, as the coefficients can be directly compared to each other.
+
+```{r}
+newhappiness$economy_z<-scale(newhappiness$Economy)
+newhappiness$freedom_z<-scale(newhappiness$Freedom)
+newhappiness$life.expectancy_z<-(newhappiness$Life.Expectancy)
+```
+#### Regression Results
+```{r}
+#linear regression modeling
+Economylifeexpectancyfreedomonscore <- lm(Happiness.Score ~ economy_z+freedom_z+life.expectancy_z , data = newhappiness)
+Economylifeexpectancyfreedomonscoresum <-summary(Economylifeexpectancyfreedomonscore, title = "Summary of the linear model for feature importance")
+```
+
+
+```{r, results='markup', warning=FALSE}
+Economylifeexpectancyfreedomonscoresum
+```
+
+
+```{r linearmodel_vif, results=T}
+vif(Economylifeexpectancyfreedomonscore)
+```
+
+I also looked at the VIF of the variables within the model to ensure that multi-collinearity is not a concern for my data. With VIF values less than 5, I can conclude that there are not many collinearity concerns in the dataset.
+
+
+
+```{r}
+#linear regression graph
+avPlots(Economylifeexpectancyfreedomonscore)
+```
+
+These plots show the relationship between each specified standardized variable in the regression and `Happiness.Score`, while holding all other variables constant.
+
+### Feature Importance Analysis
+
+To see which variables are most important in changing the `Happiness Score`, I looked at the coefficients of the standardized variables. All the included variables are statistically significant (p-value<0.05), so I can analyze each coefficient. The highest coefficient was `Life.Expectancy`. After `Life.Expectancy`, `Economy` was the second most important, followed closely by `Freedom`. This caught us off guard because I thought the most correlated variable, `Economy`, would be the most important in changing the `Happiness Score`. However, this test makes sense because if one has a longer life expectancy, you can expect them to have more time to pursue the things that make them happy, such as hobbies, careers, and relationships.
+Additionally, people with a longer life expectancy are more likely to have good health, contributing to happiness. Good health allows people to engage in the activities and experiences that bring them joy and can also reduce the stress and worry that can come with poor health and negatively impact happiness. A report on happiness and life expectancy by the National Academy of the Sciences studied the relationship between the two. The report stated, "People who had higher levels of happiness had a longer life span" (Lee, 2019). Even though this study looked at the inverse relationship, it still applied to my analysis. As I looked at the relationship between the two, I found that the happiest countries in my dataset had high life expectancy scores.
+
+# Conclusion
+## Data Analysis
+My SMART question set out to find the effect of the differences in correlations of variables of `Happiness.Score` depending on the region. I discovered that certain areas had higher correlated variables than others, but overall trends were still seen between the correlation matrices. `Economy`, `Life.Expectancy`, and `Freedom` were the dataset's most commonly strongly correlated variables. Knowing the most frequently correlated variables, I looked to see which were most important in changing the `Happiness.Score`. By standardizing these variables and running a linear regression, I found that `Life.Expectancy` is the most important of the three variables, followed by `Economy` and `Freedom`. 
+
+These results are supported by outside research on happiness. In an article on the 2021 World Happiness Report results, Lyndsey Matthews identified the variables life expectancy and economy "to be highly predictive of happiness" (Matthews, 2022). She also found that the happiest countries always have strong scores in these variables and high levels of freedom. In addition, another report on the effect of government policy on happiness from the London School of Economics reaffirmed Matthews's statement. It claimed that a country's happiness is most affected by "their incomes and employment" (Stewart, 2020). This means that a country with low income and employment levels will be unhappy, and this is supported in my analysis as I found `Economy` among the three most important variables. Thus, these outside sources supported the results of my data analysis.  
+
+## Social Good
+
+My data analysis of the World Happiness Report can be used for social good in several ways. First, the data set and its analysis provided in my report can be used by policymakers to identify areas where improvements can be made to promote well-being and happiness in their countries. This could include implementing policies to improve economic development (`Economy`), health (`Life.Expectancy`), and good governance (`Freedom`), which are all factors that can affect happiness. Additionally, this report can raise awareness about promoting well-being and happiness in society. By highlighting the factors contributing to happiness, the information can facilitate a broader understanding of the importance of well-being and inspire action to improve these factors.
+
+# Sources
+
+United Nations Sustainable Development Solutions Network. (n.d.). World happiness [Data set]. Kaggle. Retrieved     from https://www.kaggle.com/datasets/unsdsn/world-happiness?select=2017.csv
+
+Sustainable Development Solutions Network. (2017). World Happiness Report [Data set]. Retrieved from                https://worldhappiness.report/ed/2017/
+
+Lee, L. O., James, P., Zevon, E. S., Kim, E. S., Trudel-Fitzgerald, C., Spiro, A., 3rd, Grodstein, F., &
+    Kubzansky, L. D. (2019). Optimism is associated with exceptional longevity in 2 epidemiologic cohorts of men
+    and women. Proceedings of the National Academy of Sciences of the United States of America, 116(37),
+    18357–18362. https://doi.org/10.1073/pnas.1900712116
+    
+Matthews, L. (2022, August 25). "The world's happiest country is all about reading, coffee, and Saunas." 
+    AFAR Media. Retrieved December 12, 2022, from
+    https://www.afar.com/magazine/the-worlds-happiest-country-is-all-about-reading-coffee-and-saunas.
+    
+Stewart, K. (2020, March 17). We Can Increase Happiness Through Public Policy (And In Our Jobs and Private Lives     Too) [Blog post]. Retrieved from
+     https://blogs.lse.ac.uk/businessreview/2020/03/17/we-can-increase-happiness-through-public-policy-and-in-ou      r-jobs-and-private-lives-too/
+
