@@ -1,8 +1,10 @@
 # Aspiring Data Scientist
 
+### Technical Skills: Python, R, SQL, Power BI, Tableau, Excel, Stata
+
 ### Education
 
-BS Data Science & Economics, George Washington University Honors Program
+BS Data Science & Economics, George Washington University Honors 
 
 ### Work Experience
 
