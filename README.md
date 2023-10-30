@@ -3,7 +3,6 @@
 ### Education
 
 BS Data Science & Economics, George Washington University Honors Program
-  Expected Graduation May 2025
 
 ### Work Experience
 
