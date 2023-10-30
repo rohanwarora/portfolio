@@ -26,3 +26,5 @@ BS Data Science & Economics, George Washington University Honors
 
 
 ### Projects
+
+To be added!
