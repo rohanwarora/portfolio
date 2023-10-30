@@ -30,5 +30,5 @@ BS Data Science & Economics, George Washington University Honors (May 2025)
 #### Shaping a Happier World: Insights from the 2017 World Happiness Report
 This project analyzed the 2017 World Happiness Report, examining the factors influencing happiness scores and variations across regions. The study utilized correlation matrices, box plots, regression analysis, and feature importance tests to identify that life expectancy, economic factors, and freedom were the most impactful variables on happiness scores, with regional variations observed in their correlations.
 
-Read more [here](projects/R/worldhappiness report/FinalProject.html)
+Read more about this project [here](projects/R/worldhappiness report/FinalProject.html)
 
