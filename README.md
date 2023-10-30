@@ -11,7 +11,7 @@ BS Data Science & Economics, George Washington University Honors (May 2025)
 #### Business Operations, Planning, and Analysis Year-Round Intern @ Federal Reserve Board (May 2023 - Current)
 - Created and regularly updated a Tableau dashboard to visualize $10 million in division expenses to provide managers with clear and comprehensive insights, enabling them to make data-driven decisions that optimize resource allocation, and identify cost-saving opportunities.
 - Designed an innovative people analytics tool using Power BI for a division comprising 200 employees, empowering HR leaders with actionable insights to enhance talent decisions, improve workforce processes, and foster a positive employee experience, contributing to improved talent and business outcomes.
-- Developed a ML forecasting model in Python (utilizing packages like NumPy, Pandas, and Matplotlib) for an over $400,000 yearly travel spending budget, leading to more informed decisions and a reduction in future costs.
+- Developed an ML forecasting model in Python (utilizing packages like NumPy, Pandas, and Matplotlib) for an over $400,000 yearly travel spending budget, leading to more informed decisions and a reduction in future costs.
 
 #### Honors Research Assistant @ George Washington University (October 2022 - May 2023)
 - Constructed and analyzed an extensive panel dataset covering 3,143 counties over a period of 22 years, applying quasi-experimental and regression analysis techniques using R and STATA, to explore the influence of unionization on voting access measures, such as ballot box availability in the U.S.
