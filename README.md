@@ -32,7 +32,7 @@ This project analyzed the 2017 World Happiness Report in R, examining the factor
 
 Read more about this project [here](projects/R/worldhappiness report/FinalProject.html)
 
-## Additional Resources
+## Additional Resources:
 
 Connect with me on [LinkedIn!](https://www.linkedin.com/in/rohanwarora/)
 
