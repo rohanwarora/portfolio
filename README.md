@@ -27,14 +27,14 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 
 ## Projects:
 
-##### Shaping a Happier World: Insights from the 2017 World Happiness Report
+#### Shaping a Happier World: Insights from the 2017 World Happiness Report
 This project analyzed the 2017 World Happiness Report in R, examining the factors influencing happiness scores and variations across regions. The study utilized correlation matrices, box plots, regression analysis, and feature importance tests to identify that life expectancy, economic factors, and freedom were the most impactful variables on happiness scores, with regional variations observed in their correlations.
 
 Read more about this project [here](projects/R/worldhappiness report/FinalProject.html)
 
 
-##### Exploring the Link between Food Insecurity and Asthma: Evidence from the 2018 National Health Interview Survey
-This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Through regression analysis in STATA, it reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. 
+#### Exploring the Link between Food Insecurity and Asthma: Evidence from the 2018 National Health Interview Survey
+This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into supervised machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Through regression analysis in STATA, it reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. 
 
 Read more about this project [here](projects/STATA/Econometrics Final Project.pdf)
 
