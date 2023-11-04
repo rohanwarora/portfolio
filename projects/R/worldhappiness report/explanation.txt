@@ -1,1 +1,0 @@
-This is my project on the World Happiness Report of 2017 in R.
