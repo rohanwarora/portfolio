@@ -1,4 +1,4 @@
-# A Data Enthusiast
+# A Data Specialist
 
 ### Technical Skills: Python, R, SQL, Power BI, Tableau, Excel, Stata
 
