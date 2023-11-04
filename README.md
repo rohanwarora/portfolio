@@ -5,7 +5,6 @@
 ## Education:
 
 BS Data Science & Economics | George Washington University Honors (May 2025)
-GPA: 3.93 | Dean's List 
 
 ## Work Experience:
 
