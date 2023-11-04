@@ -34,7 +34,7 @@ Read more about this project [here](projects/R/worldhappiness report/FinalProjec
 
 
 #### Exploring the Link between Food Insecurity and Asthma: Evidence from the 2018 National Health Interview Survey
-This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into supervised machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Through regression analysis in STATA, it reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. 
+This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Through regression analysis in STATA, it reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. I also examine the model's validity and acknowledge potential sources of bias, such as measurement errors and population differences, in my analysis.
 
 Read more about this project [here](projects/STATA/Econometrics Final Project.pdf)
 
