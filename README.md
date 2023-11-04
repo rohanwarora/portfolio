@@ -1,4 +1,4 @@
-# Aspiring Data Scientist
+# A Data Enthusiast
 
 ### Technical Skills: Python, R, SQL, Power BI, Tableau, Excel, Stata
 
