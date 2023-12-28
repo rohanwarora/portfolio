@@ -1,12 +1,12 @@
 # A Data Specialist
 
-<h3 id="skills">Technical Skills</h3>: Python, R, SQL, Power BI, Tableau, Excel, Stata
+<h3 id="skills">Technical Skills</h3> Python, R, SQL, Power BI, Tableau, Excel, Stata
 
-<h2 id="education">Education</h2>:
+<h2 id="education">Education</h2>
 
 BS Data Science & Economics | George Washington University Honors (May 2025)
 
-<h2 id="experience">Work Experience</h2>:
+<h2 id="experience">Work Experience</h2>
 
 #### Business Operations, Planning, and Analysis Year-Round Intern @ Federal Reserve Board (May 2023 - Current)
 - Created and regularly updated a Tableau dashboard to visualize $10 million in division expenses to provide managers with clear and comprehensive insights, enabling them to make data-driven decisions that optimize resource allocation and identify cost-saving opportunities.
@@ -25,7 +25,7 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 
 
 
-<h2 id="projects">Projects</h2>:
+<h2 id="projects">Projects</h2>
 
 #### [Shaping a Happier World: Insights from the 2017 World Happiness Report](projects/R/worldhappiness report/FinalProject.html)
 This project analyzed the 2017 World Happiness Report in R, examining the factors influencing happiness scores and variations across regions. The study utilized correlation matrices, box plots, regression analysis, and feature importance tests to identify that life expectancy, economic factors, and freedom were the most impactful variables on happiness scores, with regional variations observed in their correlations.
