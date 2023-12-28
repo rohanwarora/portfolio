@@ -3,3 +3,12 @@ logo: /images/IMG_0175.png
 description: Honors Data Science & Economics @ George Washington University
 show_downloads: true
 theme: jekyll-theme-minimal
+navigation:
+  - title: Skills
+    url: "#skills"
+  - title: Education
+    url: "#education"
+  - title: Work Experience
+    url: "#experience"
+  - title: Projects
+    url: "#projects"
