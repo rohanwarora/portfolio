@@ -40,7 +40,7 @@ Throughout my journey in this class, I've gained a profound understanding of the
 
 Read more about this project [here](projects/STATA/Econometrics Final Project.pdf)
 
-## Additional Resources:
+## Additional Resources
 
 [Resume](resume/rohanaroraresume103123.pdf)
 
