@@ -27,13 +27,13 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 
 ## Projects:
 
-#### [Shaping a Happier World: Insights & Regression Analysis on the 2017 World Happiness Report](projects/R/worldhappiness report/FinalProject.html)
+#### [Shaping a Happier World: Insights & Regression Analysis on the 2017 World Happiness Report (R)](projects/R/worldhappiness report/FinalProject.html)
 This project analyzed the 2017 World Happiness Report in R, examining the factors influencing happiness scores and variations across regions. The study utilized correlation matrices, box plots, regression analysis, and feature importance tests to identify that life expectancy, economic factors, and freedom were the most impactful variables on happiness scores, with regional variations observed in their correlations.
 
 Read more about this project [here](projects/R/worldhappiness report/FinalProject.html)
 
 
-#### [Multi-Linear Regression Exploring the Link between Food Insecurity and Asthma: Evidence from the 2018 National Health Interview Survey](projects/STATA/Econometrics Final Project.pdf)
+#### [Multi-Linear Regression Exploring the Link between Food Insecurity and Asthma: Evidence from the 2018 National Health Interview Survey (STATA)](projects/STATA/Econometrics Final Project.pdf)
 This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Through regression analysis in STATA, it reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. I also examine the model's validity and acknowledge potential sources of bias, such as measurement errors and population differences, in my analysis.
 
 Throughout my journey in this class, I've gained a profound understanding of the intricate dynamics that underlie empirical analysis. This final project, exploring the correlation between food insecurity and asthma, has reinforced the importance of sound statistical methodologies, data validation, and cautious interpretation of results. Moreover, econometrics has taught me to recognize the multifaceted nature of real-world data and the need to address potential biases and limitations in any analysis. It's not just about crunching numbers; it's about gaining insights into complex socioeconomic phenomena and contributing to evidence-based decisions. Econometrics has equipped me with valuable skills in hypothesis testing, regression analysis, and model evaluation, which I can apply across various domains to unravel meaningful insights from data and contribute to informed decision-making processes.
