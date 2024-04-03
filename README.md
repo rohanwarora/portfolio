@@ -1,6 +1,8 @@
 # A Data Specialist
 
-### Technical Skills: Python, R, SQL, Power BI, Tableau, Excel, Stata
+### Technical Skills: RStudio, Python, SQL, Stata, Tableau, Power BI, Excel, MongoDB, Neo4j
+### Libraries/Packages: NumPy, Pandas, Matplotlib, Seaborn, Plotly, Statsmodel, Scikit-learn, dplyr, ggplot2, tidyr, shiny, JAGS
+
 
 ## Education:
 
