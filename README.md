@@ -17,12 +17,12 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 
 
 #### Honors Research Assistant @ George Washington University (October 2022 - May 2023)
-- Constructed and analyzed an extensive panel dataset covering 3,143 counties over a period of 22 years, applying quasi-experimental and regression analysis techniques using R and STATA, to explore the influence of unionization on voting access measures, such as ballot box availability in the U.S.
+- Constructed and analyzed an extensive panel dataset covering 3,143 counties over a period of 22 years, applying quasi-experimental and regression analysis techniques using R and STATA to explore the influence of unionization on voting access measures, such as ballot box availability in the U.S.
 - Developed and analyzed a comprehensive dataset of over 100 countries spanning 53 years, employing data analytics tools to examine the impact of U.S. influence on global economic liberalization efforts, elucidating key trends and factors to contribute valuable insights to the discourse on policymaking.
 - Conducted an in-depth review and synthesis of relevant literature, leveraging critical research skills to validate and enrich data analysis, ensuring the robustness of findings and strengthening the integrity of the study's conclusions.
 
 #### AmeriCorps Member @ Mission: St. Louis, Beyond School (August 2020 - June 2021)
-- Mentored 13 sixth graders at St. Louis Language Immersion School. Met students two-to-five days per week individually to help them meet literacy and math class goals and to support their social development.
+- Mentored 13 sixth graders at St. Louis Language Immersion School. Met students individually two to five days per week to help them meet literacy and math class goals and support their social development.
 - Liaised with caretakers and teachers to create personalized learning materials and strategies, contributing to a 100% graduation rate, with one of my students receiving the Beyond School Student of the Year award.
 - Recruited and trained 40 volunteers from local colleges to allow tutoring of more students needing academic support.
 
@@ -37,7 +37,7 @@ Read more about this project [here](projects/R/worldhappiness report/FinalProjec
 
 
 #### [Multi-Linear Regression Exploring the Link between Food Insecurity and Asthma: Evidence from the 2018 National Health Interview Survey (STATA)](projects/STATA/Econometrics Final Project.pdf)
-This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Through regression analysis in STATA, it reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. I also examine the model's validity and acknowledge potential sources of bias, such as measurement errors and population differences, in my analysis.
+This project, conducted as part of my Econometrics class using Stata, delves into the intricate relationship between food insecurity and asthma in the United States, utilizing data from the 2018 National Health Interview Survey. It marked my first foray into machine learning and provided invaluable skills in conducting logistic and linear regressions, data analysis, and interpreting results. Regression analysis in STATA reveals statistically significant findings, including a positive association between food insecurity and asthma risk, as well as the impactful roles of income, family size, and regional factors. I also examine the model's validity and acknowledge potential sources of bias, such as measurement errors and population differences, in my analysis.
 
 Throughout my journey in this class, I've gained a profound understanding of the intricate dynamics that underlie empirical analysis. This final project, exploring the correlation between food insecurity and asthma, has reinforced the importance of sound statistical methodologies, data validation, and cautious interpretation of results. Moreover, econometrics has taught me to recognize the multifaceted nature of real-world data and the need to address potential biases and limitations in any analysis. It's not just about crunching numbers; it's about gaining insights into complex socioeconomic phenomena and contributing to evidence-based decisions. Econometrics has equipped me with valuable skills in hypothesis testing, regression analysis, and model evaluation, which I can apply across various domains to unravel meaningful insights from data and contribute to informed decision-making processes.
 
@@ -45,7 +45,7 @@ Read more about this project [here](projects/STATA/Econometrics Final Project.pd
 
 ## Additional Resources
 
-[Resume](resume/rohanaroraresume4324.pdf)
+[My Resume](resume/rohanaroraresume4324.pdf)
 
 Connect with me on [LinkedIn!](https://www.linkedin.com/in/rohanwarora/)
 
