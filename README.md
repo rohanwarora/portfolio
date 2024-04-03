@@ -14,7 +14,6 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 - Engineered a content-based job recommendation algorithm by scraping 150+ job descriptions, applying NLP techniques to extract relevant features, and developing a machine learning model using TF-IDF and Cosine Similarity, resulting in highly personalized job and skill recommendations.
 - Developed a SARIMA time series forecasting model for a $600,000 annual travel budget in Python, leveraging NumPy, Pandas, statsmodel, and Matplotlib. Employed Monte Carlo simulations to validate and enhance the model’s performance. The optimized model led to substantial cost reductions and improved decision-making, resulting in a 20% increase in budget utilization efficiency.
 - Created and regularly updated Tableau and Power BI dashboards to visualize over $10 million in division expenses to provide managers with clear and comprehensive insights, enabling them to make data-driven decisions that optimize resource allocation and identify cost-saving opportunities.
-![image](https://github.com/rohanwarora/portfolio/assets/106567086/2d18dc83-d21a-4776-b744-128a5c7a9f7e)
 
 
 #### Honors Research Assistant @ George Washington University (October 2022 - May 2023)
