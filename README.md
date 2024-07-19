@@ -1,6 +1,6 @@
 # A Data Specialist
 
-### Technical Skills: *RStudio, Python, SQL, Stata, Tableau, Power BI, Excel, MongoDB, Neo4j*
+### Technical Skills: *RStudio, Python, SQL, Stata, Tableau, Power BI, Excel, MongoDB, Looker, dbt*
 ### Libraries/Packages: *NumPy, Pandas, Matplotlib, Seaborn, Plotly, Statsmodel, Scikit-learn, dplyr, ggplot2, tidyr, shiny, RJAGS, MCMC*
 
 
@@ -10,21 +10,15 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 
 ## Work Experience:
 
-#### Business Operations, Planning, and Analysis Year-Round Intern @ Federal Reserve Board (May 2023 - Current)
-- Engineered a content-based job recommendation algorithm by scraping 150+ job descriptions, applying NLP techniques to extract relevant features, and developing a machine learning model using TF-IDF and Cosine Similarity, resulting in highly personalized job and skill recommendations.
-- Developed a SARIMA time series forecasting model for a $600,000 annual travel budget in Python, leveraging NumPy, Pandas, statsmodel, and Matplotlib. Employed Monte Carlo simulations to validate and enhance the model’s performance. The optimized model led to substantial cost reductions and improved decision-making, resulting in a 20% increase in budget utilization efficiency.
-- Created and regularly updated Tableau and Power BI dashboards to visualize over $10 million in division expenses to provide managers with clear and comprehensive insights, enabling them to make data-driven decisions that optimize resource allocation and identify cost-saving opportunities.
+#### Data Science Year-Round Intern @ Federal Reserve Board (May 2023 - Current)
+During my internship at the Federal Reserve Board with the BOPA team, I had the opportunity to hone my technical skills while contributing to impactful financial decision-making processes. I developed various machine learning models using Python and R, such as a predictive model for the division's budget. I also created and maintained comprehensive Tableau and Power BI dashboards, providing managers/officers with clear insights that led to cost-saving opportunities. This experience was invaluable in solidifying my interest in data and demonstrating the real-world impact of analytical solutions.
 
 
 #### Honors Research Assistant @ George Washington University (October 2022 - May 2023)
-- Constructed and analyzed an extensive panel dataset covering 3,143 counties over a period of 22 years, applying quasi-experimental and regression analysis techniques using R and STATA to explore the influence of unionization on voting access measures, such as ballot box availability in the U.S.
-- Developed and analyzed a comprehensive dataset of over 100 countries spanning 53 years, employing data analytics tools to examine the impact of U.S. influence on global economic liberalization efforts, elucidating key trends and factors to contribute valuable insights to the discourse on policymaking.
-- Conducted an in-depth review and synthesis of relevant literature, leveraging critical research skills to validate and enrich data analysis, ensuring the robustness of findings and strengthening the integrity of the study's conclusions.
+As a research assistant, I have experience constructing and analyzing large datasets to study complex topics. In this role, I created a panel dataset covering over 3,000 counties and 22 years to investigate the impact of unionization on voting access measures in the United States. I used quasi-experimental methods and regression analysis (using R and STATA) to study this relationship and conducted thorough research on the topic to validate and support my data analysis. This role interested me as it allowed me to develop my data skills, which I will use in my career.
 
 #### AmeriCorps Member @ Mission: St. Louis, Beyond School (August 2020 - June 2021)
-- Mentored 13 sixth graders at St. Louis Language Immersion School. Met students individually two to five days per week to help them meet literacy and math class goals and support their social development.
-- Liaised with caretakers and teachers to create personalized learning materials and strategies, contributing to a 100% graduation rate, with one of my students receiving the Beyond School Student of the Year award.
-- Recruited and trained 40 volunteers from local colleges to allow tutoring of more students needing academic support.
+I served for an AmeriCorps Program called Beyond School Mission St. Louis. I helped a group of 13 sixth graders prepare for High School and beyond with social/emotional learning, enrichment activities, community service, and individualized academics. I was also the volunteer specialist of my school, helping recruit and train 40 volunteers to work with our students. I learned a lot while working for Beyond School, specifically skills of volunteer management, tutoring, and database management. The entire experience was really precious as it broadened my views and taught me important life skills, which I know I will use in the future.
 
 
 
