@@ -10,9 +10,11 @@ BS Data Science & Economics | George Washington University Honors (May 2025)
 
 ## Work Experience:
 
-#### Data Science Year-Round Intern @ Federal Reserve Board (May 2023 - Current)
-During my internship at the Federal Reserve Board with the BOPA team, I had the opportunity to hone my technical skills while contributing to impactful financial decision-making processes. I developed various machine learning models using Python and R, such as a predictive model for the division's budget. I also created and maintained comprehensive Tableau and Power BI dashboards, providing managers/officers with clear insights that led to cost-saving opportunities. This experience was invaluable in solidifying my interest in data and demonstrating the real-world impact of analytical solutions.
+#### Data Analytics Engineering Intern @ CarGurus (June 2024 - August 2024)
+As an intern with the Data Engineering Team, I collaborated with Data Analysts, Software Engineers, and Data Scientists to build and maintain numerous data models using dbt, Snowflake, and Looker. I optimized SQL queries for datasets with +100 million rows, achieving high performance and cost reduction. Additionally, I designed and implemented scalable big data pipelines using Airflow, improving the efficiency of data flow and processing.
 
+#### Data Science Year-Round Intern @ Federal Reserve Board (May 2023 - May 2024)
+During my internship at the Federal Reserve Board with the BOPA team, I had the opportunity to hone my technical skills while contributing to impactful financial decision-making processes. I developed various machine learning models using Python and R, such as a predictive model for the division's budget. I also created and maintained comprehensive Tableau and Power BI dashboards, providing managers/officers with clear insights that led to cost-saving opportunities. This experience was invaluable in solidifying my interest in data and demonstrating the real-world impact of analytical solutions.
 
 #### Honors Research Assistant @ George Washington University (October 2022 - May 2023)
 As a research assistant, I have experience constructing and analyzing large datasets to study complex topics. In this role, I created a panel dataset covering over 3,000 counties and 22 years to investigate the impact of unionization on voting access measures in the United States. I used quasi-experimental methods and regression analysis (using R and STATA) to study this relationship and conducted thorough research on the topic to validate and support my data analysis. This role interested me as it allowed me to develop my data skills, which I will use in my career.
