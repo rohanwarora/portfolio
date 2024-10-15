@@ -29,6 +29,9 @@ I served for an AmeriCorps Program called Beyond School Mission St. Louis. I hel
 
 ## Projects:
 
+#### From Tweets to Foreign Trade: How Trump’s Social Media Shaped International Markets
+This is my senior thesis for my economics major on the effect of Trump's tweets on short-term exchange rate volatility. This project requires substantial data scrapping, and I plan on using regression to establish a causal effect between tweets and volatility in the short term. This is a work in progress, and when I submit this assignment, I will also post it here for everyone to see.
+
 #### [Shaping a Happier World: Insights & Regression Analysis on the 2017 World Happiness Report (R)](projects/R/worldhappiness report/FinalProject.html)
 This project analyzed the 2017 World Happiness Report in R, examining the factors influencing happiness scores and variations across regions. The study utilized correlation matrices, box plots, regression analysis, and feature importance tests to identify that life expectancy, economic factors, and freedom were the most impactful variables on happiness scores, with regional variations observed in their correlations.
 
