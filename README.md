@@ -29,7 +29,7 @@ I served for an AmeriCorps Program called Beyond School Mission St. Louis. I hel
 
 ## Projects:
 
-#### [Personalized Book Recommendations with Retrieval-Augmented Generation (Python)]
+#### Personalized Book Recommendations with Retrieval-Augmented Generation (Python)
 This project is a work in progress for my data science thesis. When this is completed, I will add the project here.
 
 
