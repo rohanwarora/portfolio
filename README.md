@@ -33,10 +33,10 @@ I served for an AmeriCorps Program called Beyond School Mission St. Louis. I hel
 This project is a work in progress for my data science thesis. When this is completed, I will add the project here.
 
 
-#### [From Tweets to Foreign Trade: How Trump’s Social Media Shaped International Markets (Python)](projects/Python/Arora_thesis_final.docx)
+#### [From Tweets to Foreign Trade: How Trump’s Social Media Shaped International Markets (Python)](projects/Python/Arora_thesis_final.pdf)
 This project investigates the impact of Donald Trump's Twitter activity on foreign exchange market volatility during his presidency, employing high-frequency intraday data and utilizing the Anthropic Claude Sonnet 3.5 model for tweet classification. The study analyzes over 56,000 tweets, categorizing them into trade policy, international relations, economic policy, and security topics while examining their effects on major currency pairs, including the Turkish Lira, Canadian Dollar, and Mexican Peso. Through Ordinary Least Squares regression analysis and sentiment interaction terms, the research reveals significant correlations between Trump's tweets and currency volatility, demonstrating how social media communications from world leaders can create distinct information shocks in global financial markets. This analysis marks a contribution to understanding the intersection of social media, political communication, and financial markets, while providing practical insights into how individual-driven sentiment can influence global market dynamics.
 
-Read more about this project [here](projects/STATA/Arora_thesis_final.pdf)
+Read more about this project [here](projects/Python/Arora_thesis_final.pdf)
 
 #### [Shaping a Happier World: Insights & Regression Analysis on the 2017 World Happiness Report (R)](projects/R/worldhappiness report/FinalProject.html)
 This project analyzed the 2017 World Happiness Report in R, examining the factors influencing happiness scores and variations across regions. The study utilized correlation matrices, box plots, regression analysis, and feature importance tests to identify that life expectancy, economic factors, and freedom were the most impactful variables on happiness scores, with regional variations observed in their correlations.
