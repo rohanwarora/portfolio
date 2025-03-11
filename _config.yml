@@ -1,40 +1,14 @@
-# Site settings
-name: Rohan Weyerbrock Arora
-title: Rohan Arora | Data Enthusiast
-description: Passionate about uncovering insights and building impactful analytical solutions
-url: https://rohanarora.github.io/
-baseurl: ''
-email: rohanarora@gwu.edu
-cover: https://rohanarora.github.io/img/og.png
-logo: https://rohanarora.github.io/img/rohan.png
-resume: https://rohanarora.github.io/resume.pdf
-social:
-  - title: email
-    url: mailto:rohanarora@gwu.edu
-  - title: github
-    url: https://github.com/rohanwarora
-  - title: linkedin
-    url: https://www.linkedin.com/in/rohanwarora
-  # Add other social platforms as relevant, or remove if not applicable
-
-# Build settings
-markdown: kramdown
-
-exclude:
-  - 'Gemfile'
-  - 'Gemfile.lock'
-  - '*.gemspec'
-  - 'README.md'
-  - 'node_modules'
-  - 'build'
-  - 'gulpfile.js'
-  - 'package.json'
-
-keep_files:
-  - 'CNAME'
-  - '.git'
-  - '.gitignore'
-
-plugins_dir:
-  - jekyll-minifier
-  - jekyll-sitemap
+title: Rohan Weyerbrock Arora
+logo: /images/IMG_8851.png
+description: Honors Data Science & Economics @ George Washington University
+show_downloads: true
+theme: jekyll-theme-minimal
+navigation:
+  - title: Skills
+    url: "#skills"
+  - title: Education
+    url: "#education"
+  - title: Work Experience
+    url: "#experience"
+  - title: Projects
+    url: "#projects"
