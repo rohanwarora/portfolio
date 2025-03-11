@@ -1,25 +1,15 @@
 # Rohan Weyerbrock Arora
 
-Honors Data Science & Economics @ George Washington University
-
----
-
-### Table of Contents
-- [Skills](#technical-skills-rstudio-python-sql-stata-tableau-power-bi-excel-mongodb-looker-dbt)
-- [Education](#education)
-- [Work Experience](#work-experience)
-  - [Data Engineering Intern @ CarGurus](#data-engineering-intern--cargurus-june-2024---august-2024)
-  - [Data Science Intern @ Federal Reserve Board](#data-science-year-round-intern--federal-reserve-board-may-2023---may-2024)
-  - [Honors Research Assistant @ George Washington University](#honors-research-assistant--george-washington-university-october-2022---may-2023)
-  - [AmeriCorps Member @ Mission: St. Louis, Beyond School](#americorps-member--mission-st-louis-beyond-school-august-2020---june-2021)
-- [Projects](#projects)
-  - [Personalized Book Recommendations](#personalized-book-recommendations-with-retrieval-augmented-generation-python)
-  - [Tweets to Foreign Trade](#from-tweets-to-foreign-tradeHow-trumps-social-media-shaped-international-markets-python)
-  - [World Happiness Report Analysis](#shaping-a-happier-world-insights--regression-analysis-on-the-2017-world-happiness-report-r)
-  - [Food Insecurity and Asthma](#multi-linear-regression-exploring-the-link-between-food-insecurity-and-asthma-evidence-from-the-2018-national-health-interview-survey-stata)
-- [Additional Resources](#additional-resources)
-
----
+<div style="position:fixed; top:10%; right:20px; background-color:#ffffff; padding:10px; border-radius:5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+  <h4 style="margin-top:0;">Table of Contents</h4>
+  <ul style="list-style:none; padding-left:0;">
+    <li><a href="#technical-skills-rstudio-python-sql-stata-tableau-power-bi-excel-mongodb-looker-dbt" style="text-decoration:none;">Skills</a></li>
+    <li><a href="#education" style="text-decoration:none;">Education</a></li>
+    <li><a href="#work-experience" style="text-decoration:none;">Work Experience</a></li>
+    <li><a href="#projects" style="text-decoration:none;">Projects</a></li>
+    <li><a href="#additional-resources" style="text-decoration:none;">Additional Resources</a></li>
+  </ul>
+</div>
 
 ### Technical Skills: *RStudio, Python, SQL, Stata, Tableau, Power BI, Excel, MongoDB, Looker, dbt*
 ### Libraries/Packages: *NumPy, Pandas, Matplotlib, Seaborn, Plotly, Statsmodel, Scikit-learn, dplyr, ggplot2, tidyr, shiny, RJAGS, MCMC*
