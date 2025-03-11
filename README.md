@@ -1,11 +1,11 @@
 # Rohan Weyerbrock Arora
 
-<div style="position:fixed; top:10%; right:20px; background-color:#ffffff; padding:10px; border-radius:5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-  <h4 style="margin-top:0;">Table of Contents</h4>
-  <ul style="list-style:none; padding-left:0;">
-    <li><a href="#work-experience" style="text-decoration:none;">Work Experience</a></li>
-    <li><a href="#projects" style="text-decoration:none;">Projects</a></li>
-    <li><a href="#additional-resources" style="text-decoration:none;">Additional Resources</a></li>
+<div style="position:fixed; top:10%; right:20px; background-color:rgba(255, 255, 255, 0.9); padding:15px; border-radius:8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid #ddd; max-width: 200px; z-index: 1000;">
+  <h4 style="margin-top:0; font-size:16px; font-weight:bold; color:#333; text-align:center;">Navigation</h4>
+  <ul style="list-style:none; padding-left:0; margin-top:10px; font-size:14px; color:#333;">
+    <li style="margin-bottom:5px;"><a href="#work-experience" style="text-decoration:none; color:#007acc; font-weight:500;" onmouseover="this.style.color='#005999'" onmouseout="this.style.color='#007acc'">Work Experience</a></li>
+    <li style="margin-bottom:5px;"><a href="#projects" style="text-decoration:none; color:#007acc; font-weight:500;" onmouseover="this.style.color='#005999'" onmouseout="this.style.color='#007acc'">Projects</a></li>
+    <li style="margin-bottom:5px;"><a href="#additional-resources" style="text-decoration:none; color:#007acc; font-weight:500;" onmouseover="this.style.color='#005999'" onmouseout="this.style.color='#007acc'">Additional Resources</a></li>
   </ul>
 </div>
 
