@@ -3,7 +3,6 @@
 <div style="position:fixed; top:10%; right:20px; background-color:#ffffff; padding:10px; border-radius:5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
   <h4 style="margin-top:0;">Table of Contents</h4>
   <ul style="list-style:none; padding-left:0;">
-    <li><a href="#technical-skills-rstudio-python-sql-stata-tableau-power-bi-excel-mongodb-looker-dbt" style="text-decoration:none;">Skills</a></li>
     <li><a href="#education" style="text-decoration:none;">Education</a></li>
     <li><a href="#work-experience" style="text-decoration:none;">Work Experience</a></li>
     <li><a href="#projects" style="text-decoration:none;">Projects</a></li>
