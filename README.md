@@ -1,7 +1,5 @@
 # Rohan Weyerbrock Arora
 
-![Logo](/images/IMG_8851.png)
-
 Honors Data Science & Economics @ George Washington University
 
 ---
