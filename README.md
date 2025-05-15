@@ -32,7 +32,7 @@ I served for an AmeriCorps Program called Beyond School Mission St. Louis. I hel
 
 ## Projects:
 
-#### [Personalized Book Recommendations with Retrieval-Augmented Generation (Python)][projects/Python/Final_Paper_DATS_4001.pdf]
+#### [Personalized Book Recommendations Using Retrieval Augmented Generation (Python)](projects/Python/Final_Paper_DATS_4001.pdf)
 This project is a content-based book recommendation system that uses large language models to suggest titles based on user-inputted descriptions and emotional tone, rather than user history. Built with Python, LangChain, Hugging Face, and Gradio, it integrates zero-shot genre classification, sentiment analysis, and vector similarity search to deliver nuanced recommendations through an interactive web interface.
 
 Read more about this project [here](projects/Python/Final_Paper_DATS_4001.pdf)
