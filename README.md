@@ -14,7 +14,7 @@
 
 ## Education:
 
-BS Data Science & Economics | George Washington University Honors (May 2025)
+BS Data Science & Economics | George Washington University Honors
 
 ## Work Experience:
 
