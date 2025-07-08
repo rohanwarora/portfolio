@@ -54,6 +54,6 @@ Read more about this project [here](projects/STATA/Econometrics Final Project.pd
 
 ## Additional Resources
 
-[My Resume](resume/rohanaroraresume91524.pdf)
+[My Resume](resume/rohanwaroraresume.pdf)
 
 Connect with me on [LinkedIn](https://www.linkedin.com/in/rohanwarora/)
