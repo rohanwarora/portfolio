@@ -18,7 +18,7 @@ BS Data Science & Economics | George Washington University Honors
 
 ## Work Experience:
 
-#### Data Engineering Intern @ CarGurus (June 2024 - August 2024)
+#### Data Analytics Engineer Intern @ CarGurus (June 2024 - August 2024)
 As an intern with the Data Engineering Team, I collaborated with Data Analysts, Software Engineers, and Data Scientists to build and maintain numerous data models using dbt, Snowflake, and Looker. I optimized SQL queries for datasets with +100 million rows, achieving high performance and cost reduction. Additionally, I designed and implemented scalable big data pipelines using Airflow, improving the efficiency of data flow and processing.
 
 #### Data Science Year-Round Intern @ Federal Reserve Board (May 2023 - May 2024)
