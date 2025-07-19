@@ -298,18 +298,14 @@
       const sections = document.querySelectorAll('#hero, #tech-section, #timeline-section, #projects-section');
       const navIndicators = document.querySelectorAll('.nav-indicator');
       
-      // Create intersection observer
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Remove active class from all indicators
             navIndicators.forEach(indicator => indicator.classList.remove('active'));
             
-            // Add active class to current section's indicator
             const sectionId = entry.target.id;
             let targetSection = sectionId;
             
-            // Map section IDs to nav indicator data-section values
             if (sectionId === 'hero') targetSection = 'hero';
             else if (sectionId === 'tech-section') targetSection = 'tech';
             else if (sectionId === 'timeline-section') targetSection = 'timeline';
@@ -322,22 +318,19 @@
           }
         });
       }, {
-        threshold: 0.3, // Trigger when 30% of section is visible
-        rootMargin: '-10% 0px -10% 0px' // Add some margin for better detection
+        threshold: 0.3, 
+        rootMargin: '-10% 0px -10% 0px' 
       });
 
-      // Observe all sections
       sections.forEach(section => {
         observer.observe(section);
       });
 
-      // Add click functionality to navigate to sections
       navIndicators.forEach(indicator => {
         indicator.addEventListener('click', function() {
           const sectionName = this.dataset.section;
           let targetId = sectionName;
           
-          // Map nav indicator data-section to actual section IDs
           if (sectionName === 'hero') targetId = 'hero';
           else if (sectionName === 'tech') targetId = 'tech-section';
           else if (sectionName === 'timeline') targetId = 'timeline-section';
@@ -353,7 +346,6 @@
         });
       });
 
-      // Initialize - set first section as active
       if (navIndicators.length > 0) {
         navIndicators[0].classList.add('active');
       }
