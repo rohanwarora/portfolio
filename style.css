@@ -772,6 +772,13 @@ body.menu-open {
   background-color: #ccc;
 }
 
+.project-availability {
+  margin: auto 0 0;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 1200px) {
   .quadrant-wrapper {
     width: 95%;
